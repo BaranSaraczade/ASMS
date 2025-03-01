@@ -1,0 +1,1 @@
+Şuan sorun yok. Ekran çalışıyor. Devam edebiliriz

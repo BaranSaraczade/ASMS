@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Ana Sayfa"/>
+
+    <item
+        android:id="@+id/navigation_devices"
+        android:icon="@drawable/ic_phone"
+        android:title="Cihazlar"/>
+
+    <item
+        android:id="@+id/navigation_sms"
+        android:icon="@drawable/ic_message"
+        android:title="SMS"/>
+
+    <item
+        android:id="@+id/navigation_reports"
+        android:icon="@drawable/ic_reports"
+        android:title="Raporlar"/>
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profil"/>
+</menu>
