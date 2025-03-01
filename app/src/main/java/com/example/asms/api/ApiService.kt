@@ -21,4 +21,24 @@ interface ApiService {
 
     @GET("device/list.php")
     suspend fun getUserDevices(@Header("USER-ID") userId: Int): Response<DeviceListResponse>
+
+    // Kampanya listeleme API çağrısı
+    @GET("api/campaign/list.php")
+    fun getCampaigns(@Header("USER_ID") userId: Int): Call<CampaignListResponse>
+
+    // Kampanya detayları API çağrısı
+    @GET("api/campaign/get_stats.php")
+    fun getCampaignDetails(@Query("id") campaignId: Int): Call<CampaignDetailResponse>
+
+    // Kampanyayı başlatma API çağrısı
+    @POST("api/campaign/start.php")
+    fun startCampaign(@Body requestBody: CampaignActionRequest): Call<ApiResponse>
+
+    // Kampanyayı durdurma API çağrısı
+    @POST("api/campaign/stop.php")
+    fun stopCampaign(@Body requestBody: CampaignActionRequest): Call<ApiResponse>
+
+    // Kampanyayı duraklatma API çağrısı
+    @POST("api/campaign/pause.php")
+    fun pauseCampaign(@Body requestBody: CampaignPauseRequest): Call<ApiResponse>
 }
