@@ -8,26 +8,23 @@ data class ApiResponse(
     val data: DeviceData?
 )
 
-data class CampaignListResponse(
-    val success: Boolean = false,
-    val message: String = "",
-    val data: List<Campaign> = emptyList()
-) : Serializable
+
 
 data class CampaignDetailResponse(
-    val success: Boolean = false,
+    val success: Boolean,
     val campaign: Campaign? = null,
     val stats: CampaignStats? = null,
     val messages: List<CampaignMessage> = emptyList()
-) : Serializable
+)
 
 data class CampaignActionRequest(
-    val campaign_id: Int = 0
-) : Serializable
+    val campaign_id: Int
+)
 
 data class CampaignPauseRequest(
-    val campaign_id: Int = 0,
+    val campaign_id: Int,
     val duration: Int = 0,
     val timed: Boolean = false,
     val manual: Boolean = false
-) : Serializable
+)
+

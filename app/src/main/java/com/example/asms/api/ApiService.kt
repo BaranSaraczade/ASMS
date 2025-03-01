@@ -10,6 +10,13 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.Call
+import retrofit2.http.Query
+import com.example.asms.model.CampaignListResponse
+import com.example.asms.model.CampaignDetailResponse
+import com.example.asms.model.CampaignActionRequest
+import com.example.asms.model.CampaignPauseRequest
+
 
 
 interface ApiService {
@@ -22,9 +29,9 @@ interface ApiService {
     @GET("device/list.php")
     suspend fun getUserDevices(@Header("USER-ID") userId: Int): Response<DeviceListResponse>
 
-    // Kampanya listeleme API çağrısı
-    @GET("api/campaign/list.php")
-    fun getCampaigns(@Header("USER_ID") userId: Int): Call<CampaignListResponse>
+    // Kampanya listesi API çağrısı
+    @GET("api/campaign/list.php") // veya gerçek endpoint'iniz
+    fun getCampaigns(@Query("user_id") userId: Int): Call<CampaignListResponse>
 
     // Kampanya detayları API çağrısı
     @GET("api/campaign/get_stats.php")
@@ -41,4 +48,5 @@ interface ApiService {
     // Kampanyayı duraklatma API çağrısı
     @POST("api/campaign/pause.php")
     fun pauseCampaign(@Body requestBody: CampaignPauseRequest): Call<ApiResponse>
+
 }

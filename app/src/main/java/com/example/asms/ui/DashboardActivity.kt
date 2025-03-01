@@ -11,6 +11,7 @@ import com.example.asms.utils.PrefsManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 import android.view.View
+import com.example.asms.ui.fragments.CampaignsFragment
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -67,7 +68,9 @@ class DashboardActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_reports -> {
-                    // Raporlar sayfası
+                    findViewById<FrameLayout>(R.id.fragment_container).visibility = View.VISIBLE
+                    findViewById<MaterialCardView>(R.id.userInfoCard).visibility = View.VISIBLE
+                    loadFragment(CampaignsFragment())
                     true
                 }
                 R.id.navigation_profile -> {

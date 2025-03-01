@@ -1,4 +1,4 @@
-package com.example.asms.models
+package com.example.asms.model
 
 import java.io.Serializable
 
@@ -13,7 +13,7 @@ data class Campaign(
     val sentNumbers: Int = 0,
     val failedNumbers: Int = 0,
     val spamNumbers: Int = 0,
-    val status: Int = 0, // 0=işlemde, 1=tamamlandı, 2=başarısız, 3=iptal edildi
+    val status: Int = 0,
     val createdAt: String = "",
     val completedAt: String? = null,
     val deviceName: String = "",

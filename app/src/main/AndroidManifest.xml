@@ -30,6 +30,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.activities.CampaignDetailActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

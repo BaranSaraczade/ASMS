@@ -1,12 +1,6 @@
-package com.example.asms.models
+package com.example.asms.model
 
 import java.io.Serializable
-
-data class CampaignDetail(
-    val campaign: Campaign? = null,
-    val stats: CampaignStats? = null,
-    val messages: List<CampaignMessage> = emptyList()
-) : Serializable
 
 data class CampaignStats(
     val total: Int = 0,
